@@ -1,0 +1,47 @@
+/* Default styles for all pages */
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Custom CSS styles for home page message boards*/
+
+.content-section {
+    background: #fafafa;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.message-title {
+    color: #777777;
+}
+
+a.message-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.message-content {
+    white-space: pre-line;
+}
+
+.content-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid, #777777;
+}
+
+.content-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
