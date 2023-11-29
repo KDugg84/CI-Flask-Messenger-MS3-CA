@@ -1,4 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div>
+    <form class="register-form" action="" method="POST" >
+        {{ form.hidden_tag() }}
+        <h5>Join Today</h5>
+        <div>
+            {{ form.uname.label(class="form-label") }}
+            {{ form.uname(class="text-input") }}
+        </div>
+        <div>
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="text-input") }}
+        </div>
+        <div>
+            {{ form.pwd.label(class="form-label") }}
+            {{ form.pwd(class="text-input") }}
+        </div>
+        <div>
+            {{ form.pwd_confirm.label(class="form-label") }}
+            {{ form.pwd_confirm(class="text-input") }}
+        </div>
+        <div>
+            {{ form.submit(class="btn-submit") }}
+        </div>
+    </form>
+</div>
+<div>
+    <small>
+        Already Have An Account? <a href="{{ url_for('login') }}">Sign In Here</a>
+    </small>
+</div>
 {% endblock content %}
