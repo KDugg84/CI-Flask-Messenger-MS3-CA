@@ -1,4 +1,5 @@
 from flask import render_template
+from forms import RegistrationForm, LoginForm
 from flaskmessenger import app, db
 
 # Dummy date to iterate through using jinja for loops.
@@ -32,3 +33,15 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route("/register")
+def register():
+    form = RegistrationForm()
+    return render_template("register.html", title='Register', form=form)
+
+
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template("login.html", title='Login', form=form)
