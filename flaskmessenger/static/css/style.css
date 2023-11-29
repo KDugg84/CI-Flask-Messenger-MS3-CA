@@ -11,6 +11,10 @@ html {
     border: 0;
 }
 
+body {
+    background-color: #eceff1;
+}
+
 /* Custom CSS styles for home page message boards*/
 
 .content-section {
@@ -44,4 +48,80 @@ a.message-title:hover {
 .content-metadata a:hover {
     color: #333;
     text-decoration: none;
+}
+
+/* Custom CSS styles for registration form */
+
+.register-form {
+    margin-top: 50px;
+    color: #777777;
+    background-color: #fafafa;
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid #777777;
+    border-radius: 10px;
+}
+
+form > h5 {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: #777777;
+    margin-bottom: 16px;
+}
+
+.text-input {
+    background: transparent;
+    color: #777777;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f16c6b;
+    color: whitesmoke;
+    display: block;
+}
+
+.btn-submit:hover {
+    background-color: whitesmoke;
+    color: #f16c6b;
+}
+
+/* Footer styles for all pages */
+
+footer {
+    height: 150px;
+    background-color: #039be5;
+    box-shadow: 0 0 5px #000000;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: white;
+}
+
+.social-networks i:hover {
+    color: #f16c6b;
 }
