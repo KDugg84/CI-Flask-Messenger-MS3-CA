@@ -21,9 +21,9 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
                     <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,12 +31,13 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="">Login</a></li>
-            <li><a href="">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
 
+    <!-- child template content is injected here -->
     <main class="container left-align">
         <div class="row">
             <div class="s12 m6">
@@ -45,6 +46,28 @@
             </div>
         </div>
     </main>
+
+    <!-- footer and social media links -->
+    <footer>
+        <ol class="social-networks">
+            <li>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                    aria-label="Find us on Facebook (link opens in a new tab)"> <i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                    aria-label="Find us on Twitter (link opens in a new tab)"> <i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                    aria-label="Find us on Instagram (link opens in a new tab)"> <i class="fab fa-instagram-square"></i></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener"
+                    aria-label="Find us on Youtube (link opens in a new tab)"> <i class="fab fa-youtube"></i></a>
+            </li>
+        </ol>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
