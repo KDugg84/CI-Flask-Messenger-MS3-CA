@@ -99,6 +99,13 @@ form > h5 {
     color: #f16c6b;
 }
 
+.invalid {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 80%;
+    color: #dc3545;
+}
+
 /* Flash message alert*/
 
 .alert-message {
