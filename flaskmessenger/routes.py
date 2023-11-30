@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, flash, redirect
 from forms import RegistrationForm, LoginForm
 from flaskmessenger import app, db
 
@@ -35,9 +35,13 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/register")
+@app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
+    # conditional to validate a successful registration
+    if form.validate_on_submit():
+        flash(f'Account created for {form.uname.data}!', 'success')
+        return redirect(url_for('home'))
     return render_template("register.html", title='Register', form=form)
 
 
