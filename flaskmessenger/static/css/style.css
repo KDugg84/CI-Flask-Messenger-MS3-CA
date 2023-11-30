@@ -99,6 +99,18 @@ form > h5 {
     color: #f16c6b;
 }
 
+/* Flash message alert*/
+
+.alert-message {
+    text-align: center;
+    color: #fafafa;
+    background-color: #66bb6a;
+    padding: 5px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
 /* Footer styles for all pages */
 
 footer {
