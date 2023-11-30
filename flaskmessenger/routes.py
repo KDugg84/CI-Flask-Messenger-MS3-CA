@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect
+from flask import render_template, url_for, flash, redirect
 from forms import RegistrationForm, LoginForm
 from flaskmessenger import app, db
 
