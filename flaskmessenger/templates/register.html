@@ -5,21 +5,85 @@
         {{ form.hidden_tag() }}
         <h5>Join Today</h5>
         <div>
+            <!-- takes username info from the forms.py file -->
             {{ form.uname.label(class="form-label") }}
+
+            <!-- if statement to give validation feedback to user -->
+            {% if form.uname.errors %}
             {{ form.uname(class="text-input") }}
+
+            <!-- for loop to iterate through errors if validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.uname.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.uname(class="text-input") }}
+            {% endif %}
         </div>
+
         <div>
+            <!-- takes email info from the forms.py file -->
             {{ form.email.label(class="form-label") }}
+
+            <!-- if statement to give validation feedback to user's email -->
+            {% if form.email.errors %}
             {{ form.email(class="text-input") }}
+
+            <!-- for loop to iterate through errors if email validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.email(class="text-input") }}
+            {% endif %}
         </div>
+
         <div>
+            <!-- takes password info from the forms.py file -->
             {{ form.pwd.label(class="form-label") }}
+
+            <!-- if statement to give validation feedback to user's password -->
+            {% if form.pwd.errors %}
             {{ form.pwd(class="text-input") }}
+
+            <!-- for loop to iterate through errors if password validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.pwd.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.pwd(class="text-input") }}
+            {% endif %}
         </div>
+
         <div>
+            <!-- takes confirm_password info from the forms.py file -->
             {{ form.pwd_confirm.label(class="form-label") }}
+
+            <!-- if statement to confirm user's password -->
+            {% if form.pwd_confirm.errors %}
             {{ form.pwd_confirm(class="text-input") }}
+
+            <!-- for loop to iterate through errors if password_confirm validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.pwd_confirm.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.pwd_confirm(class="text-input") }}
+            {% endif %}
         </div>
+
         <div>
             {{ form.submit(class="btn-submit") }}
         </div>
