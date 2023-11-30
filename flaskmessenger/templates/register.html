@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-    <form class="register-form" action="" method="POST" >
+    <form class="register-login-form" action="" method="POST" >
         {{ form.hidden_tag() }}
         <h5>Join Today</h5>
         <div>
-            <!-- takes username info from the forms.py file -->
+            <!-- takes username variable from the forms.py file -->
             {{ form.username.label(class="form-label") }}
 
             <!-- if statement to give validation feedback to user -->
@@ -25,7 +25,7 @@
         </div>
 
         <div>
-            <!-- takes email info from the forms.py file -->
+            <!-- takes email variable from the forms.py file -->
             {{ form.email.label(class="form-label") }}
 
             <!-- if statement to give validation feedback to user's email -->
@@ -45,7 +45,7 @@
         </div>
 
         <div>
-            <!-- takes password info from the forms.py file -->
+            <!-- takes password variable from the forms.py file -->
             {{ form.password.label(class="form-label") }}
 
             <!-- if statement to give validation feedback to user's password -->
@@ -65,7 +65,7 @@
         </div>
 
         <div>
-            <!-- takes confirm_password info from the forms.py file -->
+            <!-- takes password_confirm variable from the forms.py file -->
             {{ form.password_confirm.label(class="form-label") }}
 
             <!-- if statement to confirm user's password -->
