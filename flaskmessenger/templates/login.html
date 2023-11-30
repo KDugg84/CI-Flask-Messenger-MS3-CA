@@ -1,4 +1,67 @@
 {% extends "base.html" %}
 {% block content %}
+<div>
+    <form class="register-login-form" action="" method="POST">
+        {{ form.hidden_tag() }}
+        <h5>Log In</h5>
+        <div>
+            <!-- takes email variable from the forms.py file -->
+            {{ form.email.label(class="form-label") }}
 
+            <!-- if statement to give validation feedback to user's email -->
+            {% if form.email.errors %}
+            {{ form.email(class="text-input") }}
+
+            <!-- for loop to iterate through errors if email validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.email(class="text-input") }}
+            {% endif %}
+        </div>
+
+        <div>
+            <!-- takes password variable from the forms.py file -->
+            {{ form.password.label(class="form-label") }}
+
+            <!-- if statement to give validation feedback to user's password -->
+            {% if form.password.errors %}
+            {{ form.password(class="text-input") }}
+
+            <!-- for loop to iterate through errors if password validation is incorrect -->
+            <div class="invalid">
+                {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            {{ form.password(class="text-input") }}
+            {% endif %}
+        </div>
+
+        <div>
+            <input type="checkbox" id="remember-me" name="remember-me" value="remember-me">
+            {{ form.remember() }}
+            <label for="remember-me">Remember Me</label>
+            {{ form.remember.label() }}
+        </div>
+
+        <div>
+            {{ form.submit(class="btn-submit") }}
+        </div>
+        <small>
+            <a href="#">Forgot Password?</a>
+        </small>
+    </form>
+</div>
+<div>
+    <small>
+        Need An Account? <a href="{{ url_for('register') }}">Sign Up Now</a>
+    </small>
+</div>
 {% endblock content %}
