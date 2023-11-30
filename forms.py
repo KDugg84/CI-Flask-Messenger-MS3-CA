@@ -28,6 +28,6 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
 
     # remember cookie to keep users logged in after browser is closed
-    rem_me = BooleanField('Remember Me')
+    remember = BooleanField('Remember Me')
 
     submit = SubmitField('Login Here')
