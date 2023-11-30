@@ -37,11 +37,24 @@
         </ul>
     </header>
 
-    <!-- child template content is injected here -->
     <main class="container left-align">
         <div class="row">
             <div class="s12 m6">
-                {% block content %} 
+                <!-- flash messages displayed here -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+
+                <div class="alert-message" {{ category }}>
+                    {{ message }}
+                </div>
+
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                <!-- child template content is displayed here -->
+                {% block content %}
                 {% endblock %}
             </div>
         </div>
